@@ -3,9 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
+  <title>nayramartins - front-end developer</title>
+  <style>
+    :root {
+      --color-grey-dark: #2b2b2b;
+      --color-grey-default: #4c4c4c;
+      --color-grey-light: #bcbcbc;
+      --color-white: #fff;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      background-color: var(--color-grey-dark);
+      color: var(--color-white);
+      font-family: 'Lato', sans-serif;
+      font-size: 1.6rem;
+      margin: 0;
+      width: 100%;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    a {
+      color: var(--color-white);
+    }
+
+    a:visited {
+      color: var(--color-grey-light);
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+
+    .home {
+      flex-direction: column;
+      display: flex;
+      min-height: 100vh;
+      justify-content: center;
+    }
+
+    .home-content--list {
+      margin: 40px 0;
+      padding: 0;
+    }
+
+    .home-content--list li {
+      background-color: var(--color-grey-default);
+      display: inline-block;
+      list-style: none;
+      padding: 10px 20px;
+      margin-top: 1rem;
+    }
+
+    .home-content--list li + li {
+      margin-left: 1rem;
+    }
+
+    .home-content--list.links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      height: 30rem;
+    }
+
+    .home-content--list.links img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      .home-content--list.links {
+        grid-template-columns: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Ola!</h1>
+  <main class="home">
+    <header class="home-header">
+      <div class="container">
+        <h1>Hi I'm a Nayra!</h1>
+        <h2>A funny, curious, planet hunter, guitar player, front-end developer.</h2>
+      </div>
+    </header>
+    <section class="home-content">
+      <div class="container">
+        <div class="home-content--section">
+          <h2>Things I know:</h2>
+          <ul class="home-content--list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>CSS preprocessors</li>
+            <li>JavaScript</li>
+            <li>Vue.js</li>
+            <li>Angular</li>
+          </ul>
+        </div>
+        <div class="home-content--section">
+          <h2>About me:</h2>
+          <h3>Things I do on my free time:</h3>
+          <ul class="home-content--list links">
+            <li>
+              <a href="https://www.fuzzer.rocks/login" target="_blank">
+                <img src="images/fuzzer-print.png" alt="fuzzer.rocks website print screen" />
+              </a>
+            </li>
+          </ul>
+
+          <h3>Contact:</h3>
+          <ul class="home-content--list">
+            <li><a href="https://www.linkedin.com/in/nayramartinsg/">LinkedIn</a></li>
+            <li><a href="https://github.com/nayramartins">GitHub</a></li>
+            <li><a href="mailto:martings.nayra@gmail.com">martinsg.nayra@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
